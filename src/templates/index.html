@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Face Recognition Demo</h1>
+            <!-- <p>Real-time face recognition using your webcam</p> -->
+        </div>
+
+        <div class="main-content">
+            <div class="camera-section">
+                <div class="camera-container">
+                    <div class="video-wrapper">
+                        <video id="video" autoplay muted playsinline></video>
+                        <div id="face-overlays"></div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <h3> Controls</h3>
+                        <button id="startBtn" class="btn" onclick="startCamera()">Start Camera</button>
+                        <button id="stopBtn" class="btn btn-secondary btn-hidden" onclick="stopCamera()">Stop Camera</button>
+                        <button id="captureBtn" class="btn btn-secondary btn-hidden" onclick="capturePhoto()">📸 Capture Photo</button>
+                        <button class="btn btn-secondary" onclick="reloadFaces()">Reload Faces</button>
+                    </div>
+
+                    <div class="control-group captured-photo-section" id="captured-photo-section">
+                        <h3> Captured Photo</h3>
+                        <div id="captured-photo-container">
+                            <canvas id="capturedCanvas" class="captured-canvas"></canvas>
+                            <div class="capture-actions">
+                                <button class="btn" onclick="confirmCapture()">✅ Confirm & Show Info</button>
+                                <button class="btn" onclick="saveCapture()">💾 Save Photo</button>
+                                <button class="btn btn-secondary" onclick="cancelCapture()">❌ Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group" style="display: none;">
+                        <h3>📊 Status</h3>
+                        <div id="status" class="status info">Click "Start Camera" to begin</div>
+                    </div>
+
+                    <div class="control-group" id="training-quality-section" style="display: none;">
+                        <h3>🎯 Training Quality</h3>
+                        <div id="training-quality-info">
+                            <div class="info-item">
+                                <span class="info-label">Training Status</span>
+                                <span class="info-value" id="training-status">Not loaded</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Confidence Threshold</span>
+                                <span class="info-value" id="confidence-threshold">100</span>
+                            </div>
+                        </div>
+                        <div id="person-quality-list"></div>
+                    </div>
+
+                    <div class="control-group known-faces" style="display: none;">
+                        <h3>👥 Known Faces ({{ known_faces|length }})</h3>
+                        <div class="face-list">
+                            {% if known_faces %}
+                                {% for face in known_faces %}
+                                    <span class="face-tag">{{ face }}</span>
+                                {% endfor %}
+                            {% else %}
+                                <span class="face-tag face-tag-inactive">No faces loaded</span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="control-group detected-people-section" id="detected-people-section">
+                        <h3>🔍 Thông tin nhân viên</h3>
+                        <div id="detected-people-list">
+                            <div class="personnel-info-container">
+                                <table class="personnel-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Họ và tên</th>
+                                            <th>Ngày sinh</th>
+                                            <th>Cấp bậc</th>
+                                            <th>Chức vụ</th>
+                                            <th>Đơn vị</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="personnel-table-body">
+                                        <!-- Personnel data will be populated here by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h3> Upload Test Image</h3>
+                        <div class="upload-section">
+                            <input type="file" id="uploadInput" accept="image/*" onchange="uploadImage()" class="file-input">
+                            <label for="uploadInput" class="btn btn-secondary">📁 Choose Image File</label>
+                            <div id="upload-status" class="status info hidden"></div>
+                            <div id="upload-preview" class="upload-preview hidden">
+                                <img id="upload-preview-img" alt="Uploaded image">
+                                <div id="upload-face-overlays"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

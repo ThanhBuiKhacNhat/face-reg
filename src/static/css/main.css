@@ -1,0 +1,526 @@
+/* Face Recognition Demo - Main Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.camera-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.camera-container {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.face-overlay {
+    position: absolute;
+    border: 3px solid #4facfe;
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.face-label {
+    position: absolute;
+    background: #4facfe;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateY(-100%);
+    white-space: nowrap;
+}
+
+.controls {
+    flex: 1;
+    min-width: 300px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.status {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.known-faces {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.known-faces h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.face-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.face-tag {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.detected-people-section {
+    display: block; /* Changed from none to show the section */
+}
+
+/* Personnel Table Styles */
+.personnel-info-container {
+    margin-top: 15px;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.personnel-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.personnel-table thead {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.personnel-table th,
+.personnel-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.personnel-table th {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.personnel-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.personnel-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.personnel-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.personnel-table tbody tr:nth-child(even):hover {
+    background-color: #f0f0f0;
+}
+
+.personnel-table td:first-child {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.personnel-table td:nth-child(3) {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.personnel-table td:nth-child(4) {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .personnel-table {
+        font-size: 12px;
+    }
+    
+    .personnel-table th,
+    .personnel-table td {
+        padding: 8px 10px;
+    }
+}
+
+.btn-hidden {
+    display: none;
+}
+
+.face-tag-inactive {
+    background: #6c757d;
+}
+
+.captured-photo-section {
+    display: none;
+}
+
+.captured-canvas {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.capture-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.capture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.person-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #4facfe;
+}
+
+.person-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.person-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #4facfe;
+}
+
+.person-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.person-position {
+    color: #666;
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+.person-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.info-label {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.person-bio {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    font-style: italic;
+    color: #555;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    background: #f8f9fa;
+    margin-top: 10px;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-preview {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.upload-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    display: block;
+}
+
+.upload-overlay {
+    position: absolute;
+    border: 3px solid #28a745;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.upload-label {
+    position: absolute;
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateY(-100%);
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Personnel Information Styles */
+.person-info-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.person-info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.person-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.person-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.person-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.person-details-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.person-details-table td:first-child {
+    font-weight: bold;
+    color: #495057;
+    width: 30%;
+    background-color: #f1f3f4;
+}
+
+.person-details-table td:last-child {
+    color: #212529;
+}
+
+.confidence-badge {
+    background: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.no-detection-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #dee2e6;
+}
+
+@media (max-width: 768px) {
+    .camera-section {
+        flex-direction: column;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+}

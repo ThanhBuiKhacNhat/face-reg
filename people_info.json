@@ -1,0 +1,92 @@
+{
+  "Thanh": {
+    "full_name": "Nguyễn Văn Thành",
+    "position": "Software Developer",
+    "department": "IT Department",
+    "email": "thanh@company.com",
+    "phone": "+84 123 456 789",
+    "bio": "Experienced developer with 5+ years in web development",
+    "avatar": "dataset/thanh/main.jpg"
+  },
+  "Lê Hồ Mạnh Thắng": {
+    "full_name": "Lê Hồ Mạnh Thắng",
+    "position": "Senior Software Engineer",
+    "department": "Development Team",
+    "email": "thang.le@company.com",
+    "phone": "+84 901 234 567",
+    "bio": "Senior developer specializing in backend systems and database optimization",
+    "avatar": "dataset/Lê Hồ Mạnh Thắng/Lê Hồ Mạnh Thắng.jpg"
+  },
+  "Lê Thanh Kỷ": {
+    "full_name": "Lê Thanh Kỷ",
+    "position": "Frontend Developer",
+    "department": "UI/UX Team",
+    "email": "ky.le@company.com",
+    "phone": "+84 902 345 678",
+    "bio": "Frontend specialist with expertise in React and modern web technologies",
+    "avatar": "dataset/Lê Thanh Kỷ/att.6ji6Kd33sTbfOrE8EhONqgpcozrp0ThX_tLIZrZJ92Q.jpg"
+  },
+  "Nguyễn Minh Chính": {
+    "full_name": "Nguyễn Minh Chính",
+    "position": "DevOps Engineer",
+    "department": "Infrastructure Team",
+    "email": "chinh.nguyen@company.com",
+    "phone": "+84 903 456 789",
+    "bio": "DevOps engineer responsible for CI/CD pipelines and cloud infrastructure",
+    "avatar": "dataset/Nguyễn Minh Chính/att.1hJOgPoe3JrS7mMZ4ckzSL0KuBhfzBZs13IiMYjwX8w.jpg"
+  },
+  "Nguyễn Phi Luân": {
+    "full_name": "Nguyễn Phi Luân",
+    "position": "Mobile Developer",
+    "department": "Mobile Team",
+    "email": "luan.nguyen@company.com",
+    "phone": "+84 904 567 890",
+    "bio": "Mobile application developer with expertise in React Native and Flutter",
+    "avatar": "dataset/Nguyễn Phi Luân/photo1.jpg"
+  },
+  "Nguyễn Văn Huyên": {
+    "full_name": "Nguyễn Văn Huyên",
+    "position": "Data Analyst",
+    "department": "Data Science Team",
+    "email": "huyen.nguyen@company.com",
+    "phone": "+84 905 678 901",
+    "bio": "Data analyst specializing in business intelligence and machine learning",
+    "avatar": "dataset/Nguyễn Văn Huyên/att.60Sl1QUE6VAxAe7uhx_AU60km21JcDRKZ4Q3usWsjTs.jpg"
+  },
+  "Nguyễn Xuân Bảo": {
+    "full_name": "Nguyễn Xuân Bảo",
+    "position": "QA Engineer",
+    "department": "Quality Assurance",
+    "email": "bao.nguyen@company.com",
+    "phone": "+84 906 789 012",
+    "bio": "Quality assurance engineer ensuring high-quality software delivery",
+    "avatar": "dataset/Nguyễn Xuân Bảo/photo1.jpg"
+  },
+  "Ngô Văn Thành": {
+    "full_name": "Ngô Văn Thành",
+    "position": "System Administrator",
+    "department": "IT Infrastructure",
+    "email": "thanh.ngo@company.com",
+    "phone": "+84 907 890 123",
+    "bio": "System administrator managing servers and network infrastructure",
+    "avatar": "dataset/Ngô Văn Thành/att._zZ80SIxngqhIiflZp42yx6NAjrvt0Rt2SdTPMD06Ao.jpg"
+  },
+  "Phạm Xuân Phú": {
+    "full_name": "Phạm Xuân Phú",
+    "position": "Product Manager",
+    "department": "Product Team",
+    "email": "phu.pham@company.com",
+    "phone": "+84 908 901 234",
+    "bio": "Product manager driving product strategy and roadmap development",
+    "avatar": "dataset/Phạm Xuân Phú/att.1nobrSHW5jmBSeFOi8IOLdVhTOhPLbYxZAtwCqwWNNA.jpg"
+  },
+  "Trần Văn Viện": {
+    "full_name": "Trần Văn Viện",
+    "position": "Security Engineer",
+    "department": "Cybersecurity Team",
+    "email": "vien.tran@company.com",
+    "phone": "+84 909 012 345",
+    "bio": "Security engineer specializing in application security and penetration testing",
+    "avatar": "dataset/Trần Văn Viện/att.7_GBPokH0TPq4jfnRxK7Nz8eEZnBl_nxlpINNHsx9UE.jpg"
+  }
+}

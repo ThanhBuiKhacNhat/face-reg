@@ -1,0 +1,82 @@
+{
+  "Nguyễn Văn Huyên": {
+    "full_name": "Nguyễn Văn Huyên",
+    "birth_date": "",
+    "rank": "Thiếu tá CN",
+    "position": "Nhân viên tài chính",
+    "unit": "Tiểu đoàn bộ/ Tiểu đoàn 2",
+    "avatar": "dataset/Nguyễn Văn Huyên/main.jpg"
+  },
+  "Ngô Văn Thành": {
+    "full_name": "Ngô Văn Thành",
+    "birth_date": "5/12/2003",
+    "rank": "Hạ sĩ",
+    "position": "Vệ binh",
+    "unit": "Đại đội 6/Tiểu đoàn 2",
+    "avatar": "dataset/Ngô Văn Thành/main.jpg"
+  },
+  "Phạm Xuân Phú": {
+    "full_name": "Phạm Xuân Phú",
+    "birth_date": "23/5/2003",
+    "rank": "Hạ sĩ",
+    "position": "Vệ binh",
+    "unit": "Đại đội 4/Tiểu đoàn 2",
+    "avatar": "dataset/Phạm Xuân Phú/main.jpg"
+  },
+  "Lê Hồ Mạnh Thắng": {
+    "full_name": "Lê Hồ Mạnh Thắng",
+    "birth_date": "29/6/2001",
+    "rank": "Trung úy",
+    "position": "Trung đội trưởng",
+    "unit": "Đại đội 5/Tiểu đoàn 2",
+    "avatar": "dataset/Lê Hồ Mạnh Thắng/main.jpg"
+  },
+  "Nguyễn Phi Luân": {
+    "full_name": "Nguyễn Phi Luân",
+    "birth_date": "15/11/2001",
+    "rank": "Trung úy",
+    "position": "Trợ lý kĩ thuật",
+    "unit": "Tiểu đoàn bộ/ Tiểu đoàn 2",
+    "avatar": "dataset/Nguyễn Phi Luân/main.jpg"
+  },
+  "Nguyễn Minh Chính": {
+    "full_name": "Nguyễn Minh Chính",
+    "birth_date": "5/8/2000",
+    "rank": "Thượng úy",
+    "position": "Trung đội trưởng",
+    "unit": "Đại đội 5/Tiểu đoàn 2",
+    "avatar": "dataset/Nguyễn Minh Chính/main.jpg"
+  },
+  "Nguyễn Xuân Bảo": {
+    "full_name": "Nguyễn Xuân Bảo",
+    "birth_date": "22/4/2005",
+    "rank": "Hạ sĩ",
+    "position": "Chiến sĩ nuôi quân",
+    "unit": "Tiểu đoàn bộ/ Tiểu đoàn 2",
+    "avatar": "dataset/Nguyễn Xuân Bảo/main.jpg"
+  },
+  "Lê Thanh Kỷ": {
+    "full_name": "Lê Thanh Kỷ",
+    "birth_date": "15/3/1975",
+    "rank": "Đại úy",
+    "position": "Trợ lý hậu cần",
+    "unit": "Tiểu đoàn bộ/ Tiểu đoàn 2",
+    "avatar": "dataset/Lê Thanh Kỷ/main.jpg"
+  },
+  "Trần Văn Viện": {
+    "full_name": "Trần Văn Viện",
+    "birth_date": "25/08/1972",
+    "rank": "Thiếu tá CN",
+    "position": "Tiểu đội trưởng",
+    "unit": "Tiểu đoàn bộ/ Tiểu đoàn 2",
+    "avatar": "dataset/Trần Văn Viện/main.jpg"
+  },
+  "thanh": {
+    "full_name": "Thanh",
+    "birth_date": "",
+    "rank": "",
+    "position": "",
+    "unit": "",
+    "avatar": "dataset/thanh/main.jpg"
+  }
+}
