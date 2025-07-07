@@ -24,14 +24,14 @@ async function startCamera() {
         document.getElementById('stopBtn').classList.remove('btn-hidden');
         document.getElementById('captureBtn').classList.remove('btn-hidden');
         
-        updateStatus('Camera started successfully', 'success');
+        updateStatus('Camera đã khởi động thành công', 'success');
         
         // Start face recognition
         recognitionInterval = setInterval(recognizeFaces, 1000); // Check every second
         
     } catch (err) {
         console.error('Error accessing camera:', err);
-        updateStatus('Error accessing camera: ' + err.message, 'error');
+        updateStatus('Lỗi truy cập camera: ' + err.message, 'error');
     }
 }
 
@@ -67,7 +67,7 @@ function stopCamera() {
     // Clear detected people info
     displayDetectedPeople([]);
     
-    updateStatus('Camera stopped', 'info');
+    updateStatus('Camera đã dừng', 'info');
 }
 
 /**
@@ -230,11 +230,11 @@ function capturePhoto() {
     if (!overlay) {
         overlay = document.createElement('div');
         overlay.className = 'capture-overlay';
-        overlay.textContent = '📷 Photo Captured - Confirm or Cancel';
+        overlay.textContent = '📷 Ảnh đã chụp - Xác nhận hoặc Hủy';
         videoWrapper.appendChild(overlay);
     }
     
-    updateStatus('Photo captured! Confirm to show information or cancel to continue', 'info');
+    updateStatus('Ảnh đã chụp! Xác nhận để hiển thị thông tin hoặc hủy để tiếp tục', 'info');
 }
 
 function confirmCapture() {
@@ -275,14 +275,14 @@ function saveCapture() {
     .then(response => response.json())
     .then(result => {
         if (result.success) {
-            updateStatus(`Photo saved as ${result.filepath}`, 'success');
+            updateStatus(`Ảnh đã được lưu tại ${result.filepath}`, 'success');
         } else {
-            updateStatus('Error saving photo: ' + result.error, 'error');
+            updateStatus('Lỗi khi lưu ảnh: ' + result.error, 'error');
         }
     })
     .catch(err => {
         console.error('Save error:', err);
-        updateStatus('Error saving photo: ' + err.message, 'error');
+        updateStatus('Lỗi khi lưu ảnh: ' + err.message, 'error');
     });
 }
 
@@ -392,89 +392,12 @@ async function reloadFaces() {
             loadTrainingInfo();
             
         } else {
-            updateStatus('Error reloading faces', 'error');
+            updateStatus('Lỗi khi tải lại dữ liệu khuôn mặt', 'error');
         }
         
     } catch (err) {
         console.error('Reload error:', err);
-        updateStatus('Error reloading faces: ' + err.message, 'error');
-    }
-}
-
-/**
- * Image Upload Functions
- */
-function uploadImage() {
-    const input = document.getElementById('uploadInput');
-    const status = document.getElementById('upload-status');
-    const preview = document.getElementById('upload-preview');
-    const previewImg = document.getElementById('upload-preview-img');
-    const faceOverlays = document.getElementById('upload-face-overlays');
-    
-    if (input.files && input.files[0]) {
-        const file = input.files[0];
-        
-        // Show upload status
-        status.classList.remove('hidden');
-        status.textContent = 'Processing image...';
-        status.className = 'status info';
-        
-        // Create FormData for file upload
-        const formData = new FormData();
-        formData.append('file', file);
-        
-        // Send image to server for processing
-        fetch('/upload_test', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                status.textContent = `Image processed successfully! Found ${result.faces.length} face(s)`;
-                status.className = 'status success';
-                
-                // Set preview image from server response
-                previewImg.src = result.image_base64;
-                preview.classList.remove('hidden');
-                
-                // Clear previous overlays
-                faceOverlays.innerHTML = '';
-                
-                // Display detected faces on uploaded image
-                if (result.faces && result.faces.length > 0) {
-                    result.faces.forEach(face => {
-                        const overlay = document.createElement('div');
-                        overlay.className = 'upload-overlay';
-                        overlay.style.left = face.location.left + 'px';
-                        overlay.style.top = face.location.top + 'px';
-                        overlay.style.width = (face.location.right - face.location.left) + 'px';
-                        overlay.style.height = (face.location.bottom - face.location.top) + 'px';
-                        
-                        const label = document.createElement('div');
-                        label.className = 'upload-label';
-                        label.textContent = face.name;
-                        overlay.appendChild(label);
-                        
-                        faceOverlays.appendChild(overlay);
-                    });
-                }
-                
-                // Display detected people information
-                if (result.detected_people && result.detected_people.length > 0) {
-                    displayDetectedPeople(result.detected_people);
-                }
-                
-            } else {
-                status.textContent = 'Error processing image: ' + result.error;
-                status.className = 'status error';
-            }
-        })
-        .catch(err => {
-            console.error('Upload error:', err);
-            status.textContent = 'Error uploading image: ' + err.message;
-            status.className = 'status error';
-        });
+        updateStatus('Lỗi khi tải lại dữ liệu khuôn mặt: ' + err.message, 'error');
     }
 }
 

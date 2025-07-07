@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -16,14 +16,14 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background: white;
+    background: #f8f9fa;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 
 .header {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     color: white;
     padding: 30px;
     text-align: center;
@@ -106,7 +106,7 @@ body {
 }
 
 .btn {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -122,7 +122,7 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+    box-shadow: 0 10px 20px rgba(52, 58, 64, 0.3);
 }
 
 .btn:active {
@@ -130,7 +130,7 @@ body {
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
 }
 
 .status {
@@ -509,6 +509,13 @@ body {
     background: #f8f9fa;
     border-radius: 8px;
     border: 2px dashed #dee2e6;
+}
+
+/* Hidden sections */
+.status-section-hidden,
+.training-quality-section-hidden,
+.known-faces-section-hidden {
+    display: none !important;
 }
 
 @media (max-width: 768px) {
